@@ -7,10 +7,7 @@
 class Market(object):
     
     def __init__(self, product):
-        self.product = [product]
-        self.resources = []
-        self.fops = []
-        self.items = [self.product, self.resources, self.fops]
+        self.product = product
         self.firms = []
     
     def addFirm(self, firm):
