@@ -18,7 +18,7 @@ CELLSIZE = 50
 
 assert WINDOWWIDTH % CELLSIZE == 0, "Window width must be multiple of cell size"
 assert WINDOWHEIGHT % CELLSIZE == 0, "Window height must be multiple of cell size"
-
+assert MENUHEIGHT % CELLSIZE == 0, "Menu height must be multiple of cell size"
 
 # Color variables
 
@@ -141,15 +141,11 @@ def runGame():
                         cell.isClicked(event.pos)
             
             if event.type == KEYDOWN:
-                if event.key == K_RETURN:
+                if event.key == K_RETURN or event.key == K_s:
                     for cell in drawCells:
                         if cell.view == True:
                             pygame.draw.rect(PAINTEXPORT, cell.color, cell)
-
-                    pygame.image.save(PAINTEXPORT, r'C:\Users\devin\Desktop\sprite.png')
-                
-                if event.key == K_s:
-                    pygame.image.save(PAINTEXPORT, r'C:\Users\devin\Desktop\sprite.png')
+                    pygame.image.save(PAINTEXPORT, os.path.join(os.path.dirname(__file__), "product.png"))
 
         PAINTAREA.blit(BACKGROUND, (0,0))
         
