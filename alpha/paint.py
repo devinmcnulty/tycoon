@@ -12,10 +12,6 @@ WINDOWHEIGHT = MENUHEIGHT + DRAWHEIGHT
 WINDOWWIDTH = DRAWWIDTH
 CELLSIZE = 50
 
-
-
-
-
 assert WINDOWWIDTH % CELLSIZE == 0, "Window width must be multiple of cell size"
 assert WINDOWHEIGHT % CELLSIZE == 0, "Window height must be multiple of cell size"
 assert MENUHEIGHT % CELLSIZE == 0, "Menu height must be multiple of cell size"
