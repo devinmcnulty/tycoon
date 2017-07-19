@@ -1,3 +1,7 @@
+""" Testing file """
+
+# Used to test the objects and functions of economy.py
+
 import pygame, random, math, os
 from economy import *
 
